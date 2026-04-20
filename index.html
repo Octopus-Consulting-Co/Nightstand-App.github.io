@@ -16,7 +16,12 @@
   <!-- NAV -->
   <nav>
     <a class="nav-logo" href="#">Nightstand</a>
-    <div class="nav-menu">
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open navigation menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="nav-menu" id="nav-menu">
       <a class="nav-link" href="#features">Features</a>
       <a class="nav-link" href="#screenshots">Screenshots</a>
       <a class="nav-link" href="#about">About</a>
@@ -125,6 +130,34 @@
     <p class="footer-logo">Nightstand</p>
     <p class="footer-copy">&copy; 2026 Octopus Consulting Co. All rights reserved.</p>
   </footer>
+
+  <script>
+    const nav = document.querySelector('nav');
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    const navLinks = document.querySelectorAll('.nav-link, .nav-cta');
+
+    if (nav && navToggle && navMenu) {
+      navToggle.addEventListener('click', () => {
+        const isOpen = nav.classList.toggle('nav-open');
+        navToggle.setAttribute('aria-expanded', String(isOpen));
+      });
+
+      navLinks.forEach((link) => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('nav-open');
+          navToggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+
+      window.addEventListener('resize', () => {
+        if (window.innerWidth > 640) {
+          nav.classList.remove('nav-open');
+          navToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+  </script>
 
 </body>
 </html>
