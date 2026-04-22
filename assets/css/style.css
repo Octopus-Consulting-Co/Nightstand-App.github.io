@@ -520,6 +520,63 @@ nav.nav-open .nav-toggle span:nth-child(3) {
   color: var(--olive);
 }
 
+/* ── INSTAGRAM ── */
+.instagram-callout {
+  padding: 5rem 2rem;
+  background: var(--cream);
+}
+
+.instagram-callout-inner {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.instagram-callout .section-label {
+  color: var(--olive);
+  opacity: 0.62;
+}
+
+.instagram-callout-title {
+  font-family: 'Poppins', 'Futura', 'Century Gothic', sans-serif;
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--olive);
+  margin-bottom: 1rem;
+}
+
+.instagram-callout-copy {
+  font-size: 1.12rem;
+  font-weight: 400;
+  line-height: 1.8;
+  letter-spacing: 0.02em;
+  color: rgba(87, 107, 72, 0.86);
+  margin-bottom: 1.2rem;
+}
+
+.instagram-callout-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', 'Futura', 'Century Gothic', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--olive);
+  text-decoration: none;
+  border-bottom: 1.5px solid rgba(87, 107, 72, 0.35);
+  padding-bottom: 0.18rem;
+  transition: opacity 0.2s, border-color 0.2s;
+}
+
+.instagram-callout-link:hover {
+  opacity: 0.75;
+  border-color: var(--olive);
+}
+
 /* ── QUOTE BAND ── */
 .quote-band {
   padding: 5rem 2rem;
@@ -677,7 +734,7 @@ footer {
   }
 
   .hero {
-    padding-top: 9.2rem;
+    padding-top: 11rem;
     padding-bottom: 3rem;
   }
 
@@ -691,7 +748,7 @@ footer {
   }
 
   .hero-title {
-    font-size: clamp(2.2rem, 11vw, 3rem);
+    font-size: clamp(2.45rem, 12vw, 3.2rem);
     line-height: 0.98;
     letter-spacing: 0.02em;
     max-width: 100%;
@@ -705,7 +762,7 @@ footer {
   .hero-screenshot {
     width: auto;
     max-width: 100%;
-    height: min(60vh, 500px);
+    height: min(63vh, 540px);
   }
 
   .hero-rail {
@@ -717,6 +774,8 @@ footer {
 
   .app-badge {
     padding-inline: 0;
+    font-size: 0.92rem;
+    letter-spacing: 0.1em;
   }
 
   .hero-title {
@@ -726,8 +785,12 @@ footer {
   .description {
     padding-inline: 0;
     max-width: 21ch;
-    font-size: 1.14rem;
-    line-height: 1.72;
+    font-size: 1.22rem;
+    line-height: 1.76;
+  }
+
+  .cta-group {
+    margin-bottom: 2.6rem;
   }
 
   .features-list {
@@ -747,6 +810,11 @@ footer {
 
   .founder-note {
     padding-top: 4.2rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .instagram-callout {
+    padding-top: 4rem;
     padding-bottom: 3.5rem;
   }
 
